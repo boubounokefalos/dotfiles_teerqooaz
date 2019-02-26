@@ -1,0 +1,115 @@
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! Colors for this specific setup:
+! DaRk_dOg
+!-------------------------------------------------------------------------------
+
+rofi.show-icons:            false
+rofi.modi:                  drun,run,window,ssh
+rofi.lines:                 7
+rofi.line-padding:          0
+rofi.matching:              fuzzy
+rofi.bw:                    0
+rofi.history:               true
+rofi.padding:               0
+rofi.separator-style:       none
+rofi.hide-scrollbar:        true
+rofi.line-margin:           0
+rofi.font:                  Tamzen 10
+rofi.theme:                 /home/darkdog/.config/rofi/themes/turquoise.rasi
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! Colors for this specific setup:
+! DaRk_dOg
+!-------------------------------------------------------------------------------
+
+!URxvt.depth:                32
+URxvt.geometry:             50x12
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            50
+URxvt.internalBorder:       30
+URxvt.lineSpace:            0
+
+! Fonts
+URxvt.allow_bold:           false
+URxvt*font:  xft:Tamzen:size=10
+URxvt*boldFont:  xft:Tamzen:size=10
+
+! Fix font space
+URxvt*letterSpace: -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          google-chrome-stable
+
+! Cursor
+URxvt.cursorBlink:          false
+URxvt.cursorColor:          #02a2ac
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         false
+
+!!Source http://github.com/altercation/solarized
+
+*background: #252525
+*foreground: #e8e8ec
+!!*fading: 40
+*fadeColor: #000000
+*cursorColor: #02a2ac
+*pointerColorBackground: #02a2ac
+*pointerColorForeground: #02a2ac
+
+!! white dark/light
+*color0: #e8e8ec
+*color8: #e8e8ec
+
+!! red dark/light
+*color1: #d4d8d9
+*color9: #d4d8d9
+
+!! green dark/light
+*color2: #a1b4b7
+*color10: #a1b4b7
+
+!! yellow dark/light
+*color3: #83c6cf
+*color11: #83c6cf
+
+!! blue dark/light
+*color4: #02a2ac
+*color12: #02a2ac
+
+!! magenta dark/light
+*color5: #1f7582
+*color13: #1f7582
+
+!! cyan dark/light
+*color6: #273639
+*color14: #273639
+
+!! black dark/light
+*color7: #252525
+*color15: #252525
