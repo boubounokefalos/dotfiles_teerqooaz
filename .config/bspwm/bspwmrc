@@ -1,0 +1,51 @@
+#! /bin/sh
+
+sxhkd &
+xinput set-prop 12 251 1 &
+~/.config/i3/setkeyboard.sh &
+polybar main &
+blurwal &
+exec compton -b &
+xsetroot -cursor_name left_ptr &
+dunst &
+~/.fehbg &
+mpd
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+
+bspc config border_width         1
+bspc config normal_border_color '#252525'
+bspc config active_border_color '#02a2ac'
+bspc config focused_border_color '#02a2ac'
+bspc config window_gap          10
+
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc config focus_follows_pointer 	true
+
+bspc rule -a Rofi state=floating  follow=on
+bspc rule -a rofi state=floating  follow=on
+bspc rule -a Sxiv state=floating  follow=on
+bspc rule -a sxiv state=floating  follow=on
+bspc rule -a Google-chrome desktop='2' follow=on
+bspc rule -a google-chrome desktop='2' follow=on
+bspc rule -a Qutebrowser desktop='2' follow=on
+bspc rule -a qutebrowser desktop='2' follow=on
+bspc rule -a Pcmanfm desktop='3' follow=on
+bspc rule -a pcmanfm desktop='3' follow=on
+bspc rule -a URxvt desktop='4' state=floating  follow=on
+bspc rule -a Leafpad desktop='5' follow=on
+bspc rule -a leafpad desktop='5' follow=on
+bspc rule -a Gimp-2.8 desktop='6' follow=on
+bspc rule -a gimp-2.8 desktop='6' follow=on
+bspc rule -a Oomox desktop='6' follow=on
+bspc rule -a oomox desktop='6' follow=on
+bspc rule -a feh desktop='7' state=floating  follow=on
+bspc rule -a Chromium-browser desktop='8' follow=on
+bspc rule -a crx_hecfofbbdfadifpemejbbdcjmfmboohj desktop='8' follow=on
+bspc rule -a vlc desktop='8' follow=on
+bspc rule -a vlc desktop='8' follow=on
+bspc rule -a Lxappearance desktop='9' state=floating follow=on
+bspc rule -a lxappearance desktop='9' state=floating follow=on
