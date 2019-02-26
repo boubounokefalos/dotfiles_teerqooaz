@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="icon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <div id="search">
+        <input id="search-field" type="text" name="search-field" onkeypress="return search(event)"/>
+    </div>
+    <div class="container">
+        <div id="clock"></div>
+        <div class="welcome-container">
+            <div class="row">
+                <div id="welcome-description"class="inline"></div>
+                <div class="inline">Oh it's you again...</div>
+                <div id="temp" class="inline"></div>
+            </div>
+        </div>
+        <div class="bookmark-container">
+            <div class="bookmark-set">
+                <div class="bookmark-title">Daily</div>
+<hr>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+                    <a class="bookmark" href="https://mail.google.com/" target="_blank"><i class="far fa-envelope"></i> Inbox</a>
+                    <a class="bookmark" href="https://github.com/" target="_blank"><i class="fab fa-github"></i> Github</a>
+                    <a class="bookmark" href="https://drive.google.com/" target="_blank"><i class="fab fa-google-drive"></i> Drive</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+            <div class="bookmark-title">Reddit</div>
+<hr>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://reddit.com/r/all" target="_blank"><i class="fab fa-reddit-alien"></i> /r/all</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/gtaonline/" target="_blank"><i class="fab fa-reddit"></i> /r/gtaonline</a>
+                    <a class="bookmark" href="https://reddit.com/r/unixporn" target="_blank"><i class="fab fa-reddit-square"></i> /r/unixporn</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/Polybar/" target="_blank"><i class="fab fa-reddit"></i> /r/polybar</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title">Social</div>
+<hr>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+                    <a class="bookmark" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a class="bookmark" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a class="bookmark" href="https://mewe.com/" target="_blank"><i class="fas fa-ellipsis-h"></i> MeWe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get current time and format
+        function getTime() {
+            let date = new Date(),
+                min = date.getMinutes(),
+                hour = date.getHours();
+
+            return "" + 
+                (hour < 10 ? ("0" + hour) : hour) + ":" + 
+                (min < 10 ? ("0" + min) : min);
+        }
+
+        window.onload = () => {
+            // Set up the clock
+            document.getElementById("clock").innerHTML = getTime();
+            // Set clock interval to tick clock
+            setInterval( () => {
+                document.getElementById("clock").innerHTML = getTime();
+            },100);
+        }
+    </script>
+</body>
+</html>
