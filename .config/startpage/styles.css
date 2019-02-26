@@ -1,0 +1,124 @@
+body {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    margin: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#clock {
+    font-family: jura;
+    font-size: 50pt;
+    font-weight: 400;
+    font-family: jura;
+    color: #252525;
+    margin-bottom: .25em;
+}
+
+#search {
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-field {
+    width: 90%;
+    padding: .75em 1em;
+    box-sizing: border-box;
+    background-color: #252525;
+    border: solid 0px #252525;
+    font-family: hasklig;
+    font-size: 15pt;
+    color: #FDFDFD;
+    outline: none;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.welcome-container {
+    width: 30%;
+    background-color: #e8e8ec;
+    padding: 1em;
+    border-radius: 2px;
+    font-family: hasklig;
+    font-size: 15pt;
+    font-weight: 500;
+    color: #252525;
+    text-align: center;
+}
+.inline {
+    display: inline-block;
+}
+
+.bookmark-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 55%;
+    margin: 1em 0em;
+}
+
+@media only screen and (max-width: 960px) {
+    .container {
+        height: auto;
+    }
+    #clock {
+        margin-top: 1em;
+    }
+    .container > .bookmark-container {
+        flex-direction: column;
+        width: 60%;
+    }
+    .bookmark-container > .bookmark-set {
+        width: auto;
+        margin: 1em 0em;
+    }
+}
+
+.bookmark-set{
+    padding: 1em;
+    background-color: #252525;
+    color: #ffffff;
+    border-radius: 6px;
+    font-family: hasklig;
+    font-size: 12pt;
+    width: 25%;
+    height: 10em;
+    margin: 0em .5em;
+}
+.bookmark-inner-container {
+    overflow-y: hidden;
+    height: 80%;
+    vertical-align: top;
+}
+.bookmark-title {
+    font-size: 13pt;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0em 0em .35em 0em;;
+}
+.bookmark {
+    text-decoration: none;
+    color: #ffffff;
+    display:block;
+    margin: .5em 0em;
+}
+.bookmark:hover {
+    background-color: #e8e8ec;
+    width: 100%;
+    color: #252525;
+}
