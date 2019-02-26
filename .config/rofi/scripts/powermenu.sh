@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-# to edit themes in place with live reload:
-
-# ag -l | entr -r $HOME/.config/rofi/scripts/on
-# use -normal-window flag on rofi if you want to not have to close rofi to get
-# back to your editor.
-# https://www.reddit.com/r/qtools/comments/amswu9/autoloading_rofi_for_quick_themeing_experience/
-
 options="  Poweroff
   Reboot
   Logout
