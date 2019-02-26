@@ -23,7 +23,7 @@ PS: This is optimal for my small laptop (1280x800) but I'm not sure it will look
 
 ### Teerqooaz
 
-![Alt text](https://raw.githubusercontent.com/boubounokefalos/dotfiles_frozen/master/1.png "Title")
-![Alt text](https://raw.githubusercontent.com/boubounokefalos/dotfiles_frozen/master/2.png "Title")
-![Alt text](https://raw.githubusercontent.com/boubounokefalos/dotfiles_frozen/master/3.png "Title")
-![Alt text](https://raw.githubusercontent.com/boubounokefalos/dotfiles_frozen/master/4.png "Title")
+![Alt text](https://raw.githubusercontent.com/boubounokefalos/dotfiles_teerqooaz/master/1.png "Title")
+![Alt text](https://raw.githubusercontent.com/boubounokefalos/dotfiles_teerquaz/master/2.png "Title")
+![Alt text](https://raw.githubusercontent.com/boubounokefalos/dotfiles_teerquaz/master/3.png "Title")
+![Alt text](https://raw.githubusercontent.com/boubounokefalos/dotfiles_teerquaz/master/4.png "Title")
