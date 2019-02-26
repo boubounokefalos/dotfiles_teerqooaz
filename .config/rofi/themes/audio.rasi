@@ -1,0 +1,78 @@
+* {
+    accent: #02a2ac;
+    dark: #252525;
+    light: #e8e8ec;
+
+    font-size: 1px;
+    border-color: @dark;
+    background-color: @dark;
+    text-color: @light;
+    margin: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    spacing: 0;
+}
+
+#listview {
+    spacing: 0;
+    scrollbar: false;
+    margin: 0;
+    dynamic: true;
+
+}
+
+#window {
+    background-color: @dark;
+    border-color: @dark;
+    border: 30;
+    width: 9%;
+    height: 420px;
+    border-radius: 0px;
+}
+
+#mainbox {
+    border: 0;
+    padding: 0;
+    background-color: @dark;
+}
+
+#element {
+    padding: 8;
+    border: 0 0 1 0;
+    border-color: @dark;
+    background-color: @dark;
+}
+
+#element.selected.normal {
+    background-color: @light;
+    text-color: @dark;
+    border-radius: 0px;
+
+    border: 0 0 1 0;
+    border-color: @dark;
+}
+
+#element.alternate.normal {
+    background-color: @dark;
+}
+
+#element.normal.active {
+    background-color: @accent;
+}
+
+#element.alternate.active {
+    background-color: @accent;
+}
+
+#element.selected.active {
+    background-color: @light;
+    text-color: @dark;
+    border-radius: 0px;
+
+    border: 0 0 1 0;
+    border-color: @dark;
+}
+
+#inputbar {
+    children: [];
+}
