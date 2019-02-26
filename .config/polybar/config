@@ -1,0 +1,172 @@
+;-------------------------------------------------;
+;                                                 ;
+;           Polybar config by DaRk_dOg            ;
+;                                                 ;
+;-------------------------------------------------;
+
+
+[colors]
+dark = #252525
+light = #e8e8ec
+accent = #02a2ac
+dark_accent = #273639
+urgent = #ff0000
+transparent = #00000000
+
+[bar/main]
+monitor = default
+width = 1280
+height = 24
+offset-x = 0%
+offset-y = 0%
+radius = 2.0
+fixed-center = true
+top = true
+enable-ipc = true
+dpi = 90
+
+background = ${colors.dark}
+foreground = ${colors.light}
+
+line-size = 0
+line-color = ${colors.transparent}
+
+underline-size = 2
+
+border-size = 2
+border-color = ${colors.transparent}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = FontAwesome:pixelsize=12;3
+font-1 = Jura:pixelsize=14;3
+font-2 = Material Design Icons:pixelsize=14;3
+
+modules-left = bspwm
+modules-center = title
+modules-right = updates alsa wlan date
+
+[module/bspwm]
+type = internal/bspwm
+enable-click = true
+enable-scroll = true
+wrapping-scroll = true
+format = <label-state>
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = 
+
+label-focused = %icon%
+label-focused-foreground = ${colors.light}
+label-focused-background = ${colors.accent}
+label-focused-font = 1
+label-focused-padding = 2
+
+label-occupied = %icon%
+label-occupied-font = 1
+label-occupied-padding = 2
+
+label-urgent = %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b02a20
+label-urgent-font = 1
+label-urgent-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = #555555
+label-empty-font = 1
+label-empty-padding = 2
+
+[module/title]
+type = internal/xwindow
+
+format = <label>
+format-background = ${colors.dark}
+format-foreground = ${colors.light}
+format-padding = 2
+
+label = %title%
+label-maxlen = 50
+
+label-empty = 
+label-empty-foreground = ${colors.light}
+
+[module/updates]
+type = custom/script
+interval = 600
+format-foreground = ${colors.dark}
+format-background = ${colors.light}
+format-padding = 2
+format = <label>
+exec = /home/darkdog/.config/i3/updates.sh
+click-left = /home/darkdog/.config/i3/upgrade_launcher.sh
+
+[module/alsa]
+type = internal/alsa
+
+format-muted-background = ${colors.urgent}
+format-volume-foreground = ${colors.dark}
+format-volume-background = ${colors.light}
+format-volume-padding = 1
+format-volume = %{A1:/home/darkdog/.config/rofi/scripts/rofi-audio.sh:}<ramp-volume>%{A}
+label-muted = ""
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/wlan]
+type = internal/network
+interface = wlx0022433cf79c
+interval = 3.0
+
+format-connected = %{A1:/home/darkdog/.config/rofi/scripts/rofi-wifi-menu.sh:}<ramp-signal>%{A}
+format-connected-padding = 2
+format-connected-foreground = ${colors.dark}
+format-connected-background = ${colors.light}
+
+format-disconnected = 浪
+format-disconnected-padding = 1
+format-disconnected-background = ${colors.urgent}
+
+ramp-signal-0 = 冷
+ramp-signal-1 = 爛
+ramp-signal-2 = 爛
+ramp-signal-3 = 嵐
+ramp-signal-4 = 嵐
+ramp-signal-5 = 襤
+ramp-signal-6 = 蠟
+ramp-signal-7 = 蠟
+
+[module/date]
+type = internal/date
+interval = 1
+
+time = "%H:%M"
+
+format-padding = 2
+format-foreground = ${colors.dark}
+format-background = ${colors.light}
+format-underline = ${colors.transparent}
+format =%{A1:gsimplecal & disown:}<label>%{A}
+label = %time%
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+wm-restack = bspwm
