@@ -1,0 +1,6 @@
+mainwindow_yoffset = 30
+mainwindow_xoffset = -25
+mark_today = 1
+mainwindow_decorated = 0
+mainwindow_keep_above = 1
+close_on_unfocus = 1
