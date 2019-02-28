@@ -2,6 +2,7 @@
 ! Xft settings
 !-------------------------------------------------------------------------------
 
+! Command to check DPI-- xdpyinfo | grep -B2 resolution --
 Xft.dpi:                    96
 Xft.antialias:              true
 Xft.rgba:                   rgb
@@ -9,10 +10,8 @@ Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
 !-------------------------------------------------------------------------------
-! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! Colors for this specific setup:
-! DaRk_dOg
+! Rofi settings
+! by DaRk_dOg
 !-------------------------------------------------------------------------------
 
 rofi.show-icons:            false
@@ -26,22 +25,17 @@ rofi.padding:               0
 rofi.separator-style:       none
 rofi.hide-scrollbar:        true
 rofi.line-margin:           0
-rofi.font:                  Tamzen 10
-rofi.theme:                 /home/darkdog/.config/rofi/themes/turquoise.rasi
-
+rofi.font:                  Hasklig 10
+rofi.theme:                 /home/darkdog/.config/rofi/themes/teerqooaz.rasi
 !-------------------------------------------------------------------------------
 ! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! Colors for this specific setup:
-! DaRk_dOg
+! by DaRk_dOg
 !-------------------------------------------------------------------------------
 
 !URxvt.depth:                32
 URxvt.geometry:             50x12
 URxvt.transparent:          false
 URxvt.fading:               0
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
 URxvt.loginShell:           true
 URxvt.saveLines:            50
 URxvt.internalBorder:       30
@@ -49,8 +43,8 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           false
-URxvt*font:  xft:Tamzen:size=10
-URxvt*boldFont:  xft:Tamzen:size=10
+URxvt*font:  xft:Hasklig:size=9
+URxvt*boldFont:  xft:Hasklig:size=9
 
 ! Fix font space
 URxvt*letterSpace: -1
@@ -71,8 +65,6 @@ URxvt.cursorUnderline:      false
 
 ! Pointer
 URxvt.pointerBlank:         false
-
-!!Source http://github.com/altercation/solarized
 
 *background: #252525
 *foreground: #e8e8ec
