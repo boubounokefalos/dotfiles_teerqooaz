@@ -9,7 +9,7 @@ FIELDS=SSID,SECURITY,BARS
 POSITION=3
 YOFF=38
 XOFF=-10
-FONT="Tamzen 10"
+FONT="Hasklig 10"
 
 LIST=$(nmcli --fields "$FIELDS" device wifi list | sed '/^--/d')
 # For some reason rofi always approximates character width 2 short... hmmm
