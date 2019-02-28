@@ -112,8 +112,7 @@ format-foreground = ${colors.dark}
 format-background = ${colors.light}
 format-padding = 2
 format = <label>
-exec = /home/darkdog/.config/i3/updates.sh
-click-left = /home/darkdog/.config/i3/upgrade_launcher.sh
+exec = /home/darkdog/.config/polybar/scripts/updates.sh
 
 [module/alsa]
 type = internal/alsa
