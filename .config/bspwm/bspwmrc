@@ -2,7 +2,7 @@
 
 sxhkd &
 xinput set-prop 12 251 1 &
-~/.config/i3/setkeyboard.sh &
+~/.config/bspwm/scripts/setkeyboard.sh &
 polybar main &
 blurwal &
 exec compton -b &
