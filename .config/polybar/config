@@ -23,7 +23,6 @@ radius = 2.0
 fixed-center = true
 top = true
 enable-ipc = true
-dpi = 90
 
 background = ${colors.dark}
 foreground = ${colors.light}
@@ -48,7 +47,7 @@ font-2 = Material Design Icons:pixelsize=12;3
 
 modules-left = bspwm
 modules-center = title
-modules-right = updates alsa wlan date
+modules-right = updates keyboard alsa wlan date
 
 [module/bspwm]
 type = internal/bspwm
@@ -113,6 +112,34 @@ format-background = ${colors.light}
 format-padding = 2
 format = <label>
 exec = /home/darkdog/.config/polybar/scripts/updates.sh
+
+[module/keyboard]
+type = internal/xkeyboard
+
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+
+format =<label-indicator><label-layout>
+format-spacing = 0
+
+label-layout = %icon%
+label-layout-padding = 2
+label-layout-background = ${colors.light}
+label-layout-foreground = ${colors.dark}
+
+layout-icon-default = some-icon
+layout-icon-0 = gr;
+layout-icon-1 = us;
+
+indicator-icon-0 = caps lock;+CL
+
+label-indicator-on = +%icon%
+
+label-indicator-on-capslock = 
+label-indicator-off-capslock =
+
+label-indicator-on-capslock-background = ${colors.light}
+label-indicator-on-capslock-foreground = ${colors.dark}
 
 [module/alsa]
 type = internal/alsa
